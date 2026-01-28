@@ -4,7 +4,7 @@
 <cfparam name="request.dsn" default="IncidentMaster">
 
 <!--- put your real Google Maps key here --->
-<cfset googleKey = "AIzaSyBiYrBXWAMf0Bede_7kUGdJ4Uw1Ky51G-Y">
+<cfset googleKey = "REPLACE_WITH_REAL_KEY">
 
 <!--- pull marker data from dbo.Dept --->
 <cfquery name="qDept" datasource="#request.dsn#">
