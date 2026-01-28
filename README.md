@@ -8,7 +8,7 @@ Provide your own Google Maps API key.
 
 Example placeholder:
 
-''<cfset googleKey = "REPLACE_WITH_REAL_KEY">''
+googleKey = "REPLACE_WITH_REAL_KEY"
 
 ## Google Maps API Key
 The following logic redirects existing logo paths to the updated assets location:
