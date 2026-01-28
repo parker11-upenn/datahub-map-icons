@@ -1,19 +1,14 @@
 # datahub-map-icons
-
 This repository contains updated map icons used by DataHub.
 
 All updated icons live in the `assets` folder.
 
 ## Google Maps API Key
-
-You must provide your own Google Maps API key.
-
-Do not commit a real API key to this repository.
+Provide your own Google Maps API key.
 
 Example placeholder:
 
-cfml
-<cfset googleKey = "REPLACE_WITH_REAL_KEY">
+''<cfset googleKey = "REPLACE_WITH_REAL_KEY">''
 
 ## Google Maps API Key
 The following logic redirects existing logo paths to the updated assets location:
