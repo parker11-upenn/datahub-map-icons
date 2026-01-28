@@ -1,0 +1,138 @@
+
+body, html { height: 109%; margin: 0; }
+#map { height: 100vh; width: 100%; }
+
+.upenn-font {
+    font-family: 'EB Garamond', serif;
+}
+
+#info-panel {
+  position: absolute;
+  top: 200px;
+  right: -400px;
+  height: calc(100vh - 220px); /* this - value set height of infoPanel*/
+  width: 400px;
+  background: #f8f9fa;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#info-panel.active { right: 0; } /* slide in */
+#houseImage { width: 100%; height: 180px; object-fit: cover; }
+#directorPhoto { width: 60px; height: 60px; object-fit: cover; }
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);   /* dark translucent circle */
+    color: white;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    background: rgba(0, 0, 0, 0.2);   /* darker on hover */
+}
+
+
+
+
+
+
+#styleSelector {
+    position: absolute;
+    top: 270px;
+    left: 10px;
+    z-index: 950; /* stays above the map */
+    width: auto;
+    background: white;
+    border: 2px solid #ddd;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	background-color: #011F5B !important;  /* UPenn maroon */
+	color: white;
+
+}
+
+#styleSelector2 {
+    position: absolute;
+    top: 210px; /* move it above the styleSelector */
+    left: 10px;
+    z-index: 960; /* 🔥 higher than styleSelector */
+    width: auto;
+    background: white;
+    border: 2px solid #ddd;
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 14px;
+    //font-weight: bold;
+}
+
+.upenn-label {
+    background-color: #911E21 !important;  /* UPenn maroon */
+    color: white;
+    //font-family: 'EB Garamond', serif;
+    //font-weight: 600;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+.marker-label {
+  background: #011F5B;
+  padding: 2px 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  transform: translateY(-50px); /* move label higher */
+  white-space: nowrap;
+}
+#houseName {
+    display: inline-block;                /* allow width + border */
+    background-color: #f0f0f0;           /* light gray background or your chosen color */
+    padding: 2px 6px;                    /* small padding for breathing room */
+    border-bottom: 1px solid #333;       /* thin dark line below */
+    font-weight: 600;                    /* optional: bold */
+}
+
+#houseEmailIcon {
+  vertical-align:middle;
+}
+
+#chart1Container {
+  width: 100%;
+  height: 300px; /* or any height you want */
+  min-height: 300px; /* optional safety */
+}
+
+#chart2Container {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+
+ 
+/* Keep your existing Google Maps InfoWindow styles */
+.gm-style-iw { background: white !important; padding: 4px 8px !important; border-radius: 4px !important; font-size: 13px !important; font-weight: bold; color: black !important; max-width: none !important; }
+.gm-style-iw > div { overflow: visible !important; }
+.gm-style-iw-t::after, .gm-style-iw-t::before { display: none !important; }
+.gm-style-iw-c { padding: 0 !important; }
+.gm-style-iw-c button { display: none !important; }
+
+.nav-link.sm-tab {
+padding: 0.25rem 0.5rem;
+font-size: 0.85rem;
+}
+
